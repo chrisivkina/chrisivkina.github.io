@@ -2,9 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CI</title>
+    <title>Chris Ivkina | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-Test
+    <canvas id="bg3d"></canvas>
+
+    <div class="container">
+        <header>
+            <h1>Chris Ivkina</h1>
+            <p class="subtitle">Dutch Student Software Developer</p>
+        </header>
+        <main class="tiles">
+            <section class="tile about">
+                <h2>About Me</h2>
+                <p>
+                    I am a Dutch student software developer, currently minoring in Embedded Software. I have a wide array of skills, from embedded systems to web development.
+                </p>
+            </section>
+            <section class="tile skills" style="grid-column: span 2;">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Embedded device prototypes (STM32, ESP32, Arduino, Raspberry Pi Pico (W))</li>
+                    <li>Web environments with Flask (Python)</li>
+                    <li>Static web pages</li>
+                    <li>RESTful APIs (~10k monthly visitors)</li>
+                    <li>Server environments with Docker-compose</li>
+                </ul>
+            </section>
+            <section class="tile projects" style="grid-column: span 2;">
+                <h2>Projects</h2>
+                <p>
+                    This GitHub profile contains some of my personal projects as well as professional repositories.
+                    Check these links for some demos of my work:
+                </p>
+
+                <div class="project-links">
+                    <a href="" class="project-pill">
+                        <span>🔗</span> Placeholder
+                    </a>
+                </div>
+            </section>
+            <section class="tile languages">
+                <h2>Languages</h2>
+                <ol>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>HTML/CSS</li>
+                    <li>C/C++</li>
+                    <li>Java</li>
+                    <li>PHP</li>
+                </ol>
+            </section>
+        </main>
+        <footer>
+            <p>© Chris Ivkina 2025</p>
+        </footer>
+    </div>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

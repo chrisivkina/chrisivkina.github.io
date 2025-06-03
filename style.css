@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --bg: #101214;
+    --tile-bg: #181a1b;
+    --accent: #1de9b6;
+    --text: #e0e0e0;
+    --border: #222;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.2em;
+}
+
+.subtitle {
+    color: #6ee7c7;
+    font-size: 1.1rem;
+    margin-bottom: 0.5em;
+}
+
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    flex: 1;
+}
+
+.tile {
+    background: var(--tile-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 20px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 180px;
+}
+
+.tile:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 24px 0 var(--accent);
+}
+
+h2 {
+    color: var(--accent);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.8em;
+    letter-spacing: 0.5px;
+}
+
+ul, ol {
+    padding-left: 18px;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 0.4em;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    margin-top: 32px;
+    padding-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+    .tiles {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .container {
+        padding: 16px 4px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+#bg3d {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(4px) brightness(0.7);
+    user-select: none;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 1em;
+}
+
+.project-pill {
+    display: inline-flex;
+    align-items: center;
+    background: var(--accent);
+    color: #101214;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 0.4em 1.1em;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 0 2px 12px 0 #1de9b650;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.project-pill span {
+    margin-right: 0.5em;
+    font-size: 1.1em;
+}
+
+.project-pill:hover {
+    background: #00ffe7;
+    color: #101214;
+    box-shadow: 0 4px 24px 0 #1de9b6a0;
+}
